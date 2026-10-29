@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ripple Effects and Woodson Chemical | Luca South-Ciero</title>
+  <meta name="description" content="Disruption risk simulation and a case study recommending a hybrid-centralized ERP architecture for a fragmented chemical distributor.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Luca South-Ciero</a>
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap case">
+
+  <a class="back" href="../index.html#projects">&larr; All projects</a>
+
+  <h1>Ripple Effects and the Woodson Chemical Case</h1>
+  <p class="meta">Coursework &middot; Western Washington University &middot; <span class="todo">ADD: course name and term</span></p>
+
+  <section>
+    <h2>Results at a glance</h2>
+    <div class="stats">
+      <div class="stat"><strong>98%+</strong><span>service level preserved in simulation with a mixed safety stock buffer</span></div>
+      <div class="stat"><strong>&gt;40% vs. 13%</strong><span>Sales and admin expense growth vs. sales growth at WCC, 2015 to 2019</span></div>
+      <div class="stat"><strong>325</strong><span>stocking points across 22 plants, 5 DCs and 1,500+ SKUs in the case</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Problem</h2>
+    <p>
+      Two linked questions about network risk. First, how does a disruption actually travel through a supply
+      chain, and where should a company hold buffer stock? Second, in a fictional course case, how should
+      Woodson Chemical Company (WCC) fix a fragmented, division-siloed supply chain that was driving poor
+      customer service and rising costs?
+    </p>
+  </section>
+
+  <section>
+    <h2>Approach</h2>
+    <h3>Part 1: Ripple effect simulation</h3>
+    <ul>
+      <li>Separated the <strong>ripple effect</strong> (structural, low-frequency, high-impact disruptions) from the <strong>bullwhip effect</strong> (operational, high-frequency demand and lead time swings).</li>
+      <li>Found that how far a disruption propagates, not how long it lasts, was the strongest predictor of a service-level failure.</li>
+      <li>Compared safety stock strategies. A mixed allocation, high upstream and lean downstream, preserved 98%+ service levels while cutting holding costs.</li>
+      <li>Recommended positioning safety stock downstream of high-risk nodes rather than at suppliers.</li>
+    </ul>
+    <p><span class="todo">CONFIRM: the tool you used for this simulation (AnyLogistix or another), and add it under Tools.</span></p>
+
+    <h3 style="margin-top:20px">Part 2: Woodson Chemical (WCC) case</h3>
+    <ul>
+      <li>Analyzed WCC's division-siloed information systems: 1,500+ SKUs, 22 plants, 5 DCs and 325 stocking points.</li>
+      <li>Recommended a hybrid-centralized ERP and data warehouse architecture, unifying divisional data while preserving local execution flexibility.</li>
+      <li>Built the cost case: sales and admin expenses grew more than 40% against 13% sales growth from 2015 to 2019, which justified moving away from redundant divisional software.</li>
+      <li>Proposed freight telemetry (IoT tracking) feeding a customer-facing portal for real-time order visibility.</li>
+      <li>Weighed risk and benefit tradeoffs for corporate, line distribution and customer stakeholders before recommending implementation.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools</h2>
+    <ul>
+      <li>Supply chain simulation <span class="todo">ADD: tool name</span></li>
+      <li>Case analysis and stakeholder risk and benefit assessment</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Result</h2>
+    <p>
+      A simulation-backed rule for where to hold safety stock, and a hybrid-centralized ERP recommendation
+      for WCC supported by its own financials and a stakeholder tradeoff analysis.
+    </p>
+    <p><span class="todo">OPTIONAL: add a screenshot of the simulation output if you have one.</span></p>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <p>
+      With a product footprint this large and satisfaction scores this low, the pull to fix everything at
+      once was strong. I ended up over-promising a solution without fully accounting for the true scale of
+      implementation. It was a reminder that recommendations need to match what an organization can
+      realistically absorb.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Luca South-Ciero &middot; <a href="../index.html">Back to portfolio</a></div>
+</footer>
+
+</body>
+</html>

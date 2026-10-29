@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnyLogistix Simulation | Luca South-Ciero</title>
+  <meta name="description" content="Supply chain simulation in AnyLogistix: facility location, transportation, inventory and sourcing policy experiments compared on KPIs.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Luca South-Ciero</a>
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap case">
+
+  <a class="back" href="../index.html#projects">&larr; All projects</a>
+
+  <h1>Supply Chain Simulation in AnyLogistix</h1>
+  <p class="meta">Coursework &middot; Western Washington University &middot; <span class="todo">ADD: course name and term</span></p>
+
+  <section>
+    <h2>Results at a glance</h2>
+    <div class="stats">
+      <div class="stat"><strong>4</strong><span>policy scenario types tested: facility location, transportation, inventory, sourcing</span></div>
+      <div class="stat"><strong>-26.1%</strong><span>profit change in the LTL to FTL test (min load ratio 0.8)</span></div>
+      <div class="stat"><strong>-15.9%</strong><span>revenue change in the same test, with total cost +6.6%</span></div>
+    </div>
+    <p style="margin-top:12px;color:var(--muted);font-size:0.9rem">
+      Percentages are the changes AnyLogistix displays in its KPI dashboard for that experiment.
+      <span class="todo">CONFIRM: that these are measured against your baseline experiment.</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>Problem</h2>
+    <p>
+      Supply chain network decisions are expensive to test in real life. AnyLogistix lets you simulate a
+      network, change one policy, and see the effect on profit, cost, revenue and service before committing.
+      The question in each experiment: what happens to the KPIs when a single decision changes?
+    </p>
+  </section>
+
+  <section>
+    <h2>Approach</h2>
+    <p>AnyLogistix is multi-method simulation software. I used it for three kinds of analysis:</p>
+    <ul>
+      <li><strong>Greenfield analysis:</strong> identifying optimal facility locations from geography and demand data.</li>
+      <li><strong>Network optimization:</strong> evaluating network design, throughput limits and cost tradeoffs.</li>
+      <li><strong>Inventory dynamics:</strong> modeling how policy changes ripple through supply chain performance.</li>
+    </ul>
+    <p>Scenarios I ran, using a European brewery network (factory, distribution centers and customers):</p>
+    <ul>
+      <li><strong>Distribution center locationing:</strong> redesigning the network by adding a second DC.</li>
+      <li><strong>Transportation policy:</strong> switching from less-than-truckload (LTL) to full truckload (FTL).</li>
+      <li><strong>Inventory policy:</strong> raising maximum inventory at the DCs and the factory.</li>
+      <li><strong>Sourcing policy:</strong> changing from closest-source to cheapest-source.</li>
+    </ul>
+    <p>Each experiment was compared against the others using the same set of KPIs.</p>
+  </section>
+
+  <section>
+    <h2>Tools</h2>
+    <ul>
+      <li>AnyLogistix (network simulation and KPI dashboards)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Result</h2>
+    <figure>
+      <img src="anylogistix-network-map.png" alt="AnyLogistix map of a European supply chain network with factory, distribution centers and customer locations connected by transportation lanes." style="max-width:min(420px,100%)">
+      <figcaption>The simulated network: factory, distribution centers and customers across Europe.</figcaption>
+    </figure>
+    <figure>
+      <img src="anylogistix-shipping-policy.png" alt="AnyLogistix shipping policy table showing FTL transport with a minimum load ratio of 0.8 on each lane.">
+      <figcaption>Transportation policy for the FTL experiment: full truckload with a minimum load ratio of 0.8.</figcaption>
+    </figure>
+    <figure>
+      <img src="anylogistix-kpi-dashboard.png" alt="AnyLogistix KPI dashboard for the FTL 0.8 test showing profit, average cost per item, revenue and total cost with percentage changes.">
+      <figcaption>KPI dashboard for the FTL 0.8 test: profit -26.1%, average cost per item +4.4%, revenue -15.9%, total cost +6.6%.</figcaption>
+    </figure>
+    <p>
+      Forcing fuller trucks did not save money in this network. Total cost and cost per item rose while
+      revenue and profit fell, which is a reminder that a policy that looks efficient on one metric can hurt
+      the whole system.
+    </p>
+    <p><span class="todo">CHECK: confirm that reading, and add the main finding from the DC, inventory and sourcing experiments in 1 to 2 sentences each.</span></p>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <p><span class="todo">ADD: 2 to 3 sentences in your own voice.</span></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Luca South-Ciero &middot; <a href="../index.html">Back to portfolio</a></div>
+</footer>
+
+</body>
+</html>

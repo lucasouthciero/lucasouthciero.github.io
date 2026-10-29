@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Routing Optimization | Luca South-Ciero</title>
+  <meta name="description" content="Shortest path optimization and demand-weighted facility location built in Excel.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Luca South-Ciero</a>
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap case">
+
+  <a class="back" href="../index.html#projects">&larr; All projects</a>
+
+  <h1>Routing Optimization: Shortest Path and Facility Location</h1>
+  <p class="meta">Coursework &middot; Western Washington University &middot; <span class="todo">ADD: course name and term</span></p>
+
+  <section>
+    <h2>Results at a glance</h2>
+    <div class="stats">
+      <div class="stat"><strong>11</strong><span>minimum total cost on the shortest path network</span></div>
+      <div class="stat"><strong>370 mi</strong><span>weighted average distance to the optimal capital location</span></div>
+      <div class="stat"><strong>17% / 39% / 58%</strong><span>of citizens within 100, 200 and 300 miles of that capital</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Problem</h2>
+    <p>
+      Two classic network questions. What is the cheapest route from a source to a destination through a
+      network of connected nodes? And where should a single supply center, in this case a capital, be placed
+      so that it best serves a spread-out population?
+    </p>
+  </section>
+
+  <section>
+    <h2>Approach</h2>
+    <h3>Shortest path</h3>
+    <ul>
+      <li>Wrote the problem as an algebraic formulation: minimize total arc cost subject to flow balance constraints at every node.</li>
+      <li>Built an Excel matrix of arc costs and arc flows, with decision variables for each arc, and solved for the minimum cost path.</li>
+    </ul>
+    <h3 style="margin-top:20px">Demand weighted distance</h3>
+    <ul>
+      <li>Used latitude, longitude and population data for 25 cities in a target region.</li>
+      <li>Applied the Geographic Center and Center of Gravity (COG) methods to locate the optimal facility position.</li>
+      <li>Calculated the weighted average distance and the share of citizens within 100, 200 and 300 miles of the location.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools</h2>
+    <ul>
+      <li>Excel (matrix formulation of arc costs and flows)</li>
+      <li>Center of Gravity and Geographic Center location methods</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Result</h2>
+    <figure>
+      <img src="routing-shortest-path.png" alt="A network diagram with source node s, intermediate nodes 1 to 4 and destination t, with arc costs, next to the algebraic minimization formulation.">
+      <figcaption>The network and its algebraic formulation.</figcaption>
+    </figure>
+    <figure>
+      <img src="routing-arc-matrices.png" alt="Excel arc cost matrix and arc flow matrix with an objective value of 11.">
+      <figcaption>Arc cost and arc flow matrices in Excel. Objective value: 11.</figcaption>
+    </figure>
+    <figure>
+      <img src="routing-region-map.png" alt="Outline map of a region with 25 numbered city locations and one marked as the optimal capital.">
+      <figcaption>City locations in the target region, with the optimal capital marked.</figcaption>
+    </figure>
+    <figure>
+      <img src="routing-demand-weighted-table.png" alt="Excel table of 25 cities with latitude, longitude, population and distance to the capital, plus the calculated capital location.">
+      <figcaption>City data and the calculated capital location.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <p><span class="todo">ADD: 2 to 3 sentences in your own voice.</span></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Luca South-Ciero &middot; <a href="../index.html">Back to portfolio</a></div>
+</footer>
+
+</body>
+</html>
